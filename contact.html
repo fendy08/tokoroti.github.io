@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8">
+        <title>Ajefy Bakery</title>
+       	<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+        <meta name="author" content="efendy">        
+
+        <link href="bootstrap.alt.css" rel="stylesheet">
+        <link href="bootstrap-responsive.css" rel="stylesheet">
+		<link href="mystyle.css" rel="stylesheet">
+		<link href="font-awesome.css" rel="stylesheet"> 
+		 <script src="assets/js/jquery.js"></script>
+			<script src="jquery.cycle.js"></script>
+			<script src="assets/js/jquery.xdomainajax.js"></script>	
+			<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+			<script type="text/javascript">
+					
+					function loadMap(){
+					var latlng= new google.maps.LatLng( -7.750179241364099, 110.41065791097935);
+					var myOptions= {
+						zoom :17,
+						center: latlng,
+					mapTypeId: google.maps.MapTypeId.ROADMAP 
+					};
+					var map = new google.maps.Map
+					(document.getElementById("map"), myOptions);
+					}
+					
+						$(document).ready(function(){
+			$("#yes").click(function(){
+					var a = $("#name").val();
+					var b = $("#email").val();
+					
+					alert("Your inquiry was submitted and will be responded to as soon as possible. Thank you for contacting us.");
+				});
+				});
+				
+			</script>
+	</head>
+	<body onload="loadMap()">
+
+		<div class="container">
+			<!-- Header Title and Menu -->
+			<div class="row">
+				<div class="span4">
+				<a href="home.html"><img src="bg/bakery1.png" alt="logo"/></a>
+				</div>
+				<div class="span8">
+				
+				<ul class="nav nav-tabs">
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="howto.html">HOW TO ORDER</a></li>
+					<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					PRODUCT <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						  <li><a href="#">Cup Cakes</a></li>
+						  <li><a href="#">Cakes</a></li>
+						  <li><a href="#">Pies</a></li>
+						  <li><a href="#">Ice Box</a></li>
+						  <li><a href="#">Brownies & Bars</a></li>
+					</ul>
+					</li>
+					<li><a href="gallery.html">GALLERY</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+				</ul>
+				</div>
+			</div>
+			<!-- Content 1st -->
+			<div class="row">
+			<div class="span6">
+			<img class="cake-contact" src="bg/cupcake_1.png" alt=""/>
+			<p class="contact">Want to comment on our new website?<br/>
+			Got a cupcake recipe you’d like us to try?<br/>
+			Craving a ajefy bakery in your neighborhood?<br/>
+			Or maybe you’d just like to say hi.<br/>
+			What ever it is, we’d like to hear from you.<br/>
+			If you have a question about our site, your account, your order, our products, shipping and more, we may have the answer you're looking for in our <a href="home.html">Frequently Asked Questions.</a></p>
+			</div>
+			<div class="span6">
+			<div class="hero-unit">
+			<h1>We love to hear from you, our customers</h1>	
+			</div>
+			</div>
+			</div>
+			<!-- Content 2nd -->
+			<div class="row">
+			<div class="span6">
+			<form class="form-horizontal">
+			<div class="control-group">
+
+			<label class="control-label">Name</label>
+			<div class="controls">
+			<input type="text" id="name" placeholder="Name">
+			</div>
+			</div>
+				<div class="control-group">
+				<label class="control-label" for="inputemail">Email</label>
+				<div class="controls">
+				
+				<input type="text" id="email" placeholder="Email">
+					<select class="pilihan">
+						  <option>Suggest a Recipe</option>
+						  <option>ajefybakery.com</option>
+						  <option>Ajefy bakery near me</option>
+						  <option>Just Saying Hello!!</option>
+						  <option>What do you celebrate?</option>
+						  <option>other</option>
+					</select>
+					</div>
+				</div>
+			
+					<div class="control-group">
+					<div class="controls">
+					<textarea rows="8" placeholder="Message"></textarea>
+					</div>
+					<button type="submit" class="submit btn " value="submit" id="yes">Submit</button>
+					</div>
+					</form>
+			</div>
+			
+			<div class="set-contact span4">
+			<div class="row">
+			<div class="span 4">
+			<div id="map" style="width: 500px ; height: 300px"></div>
+			</div>
+			</div>
+			<p class="main-office"><b>Main Office</b><br/>
+				Ajefy Bakery<br/>
+				181b Super Street<br/>
+				Depok, Sleman, YK <br/>
+				Please direct all public relation inquiries to <a href="ajefy07@gmail.com">ajefy07@gmail.com</a><br/>
+			</div>
+			</div>
+			
+			</div>
+		
+			<!-- Footer Container -->
+		<div class="footer-container">
+			<div class="row row-main">
+				<div class="span4">
+				<label class="control-label"></label>
+				<p class="newsletter">Newsletter</p>
+				<div class="controls">
+				<input type="text" id="inputemail" placeholder="Email address">
+				<button type="submit" class="sign btn" value="sign">Sign up</button>
+				</div>
+				
+				</div>
+				<div class="span4">
+				<p class="footer-social"><b>Social</b></p>
+						<ul class="medsos">
+						
+						<li><a href="#"><img src="bg/facebook.png" alt=""/></a></li>
+						<li><a href="#"><img src="bg/twitter.png" alt=""/></a></li>
+						<li><a href="#"><img src="bg/instagram.png" alt=""/></a></li>
+						</ul>
+						</div>
+				<div class="set-pay span4">
+				
+				<img src="bg/cc-mastercard.gif" alt=""/>
+				<img src="bg/cc-visa.gif" alt=""/>
+				<p class="credit"> © 2014 Ajefy Bakery</p>
+				</div>
+			</div>
+			
+		</div>	
+			
+	<script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+	</body>
+</html>	

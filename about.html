@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8">
+        <title>Ajefy Bakery</title>
+       	<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+        <meta name="author" content="efendy">        
+
+        <link href="bootstrap.alt.css" rel="stylesheet">
+        <link href="bootstrap-responsive.css" rel="stylesheet">
+		<link href="mystyle.css" rel="stylesheet">
+		<link href="font-awesome.css" rel="stylesheet"> 
+		
+		<script src="jquery.xdomainajax.js"></script>	
+		<script src="jquery.js"></script>
+		<script src="jquery.cycle.js"></script>
+	
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$("#loading").hide();
+				$("#we").click(function(){
+					$("#loading").show();
+					$("#weather").html("");
+					$.ajax({										         
+						url:"http://arif.staff.amikom.ac.id/weather.php",
+						type:"GET",
+						success: function(res){
+							$("#weather").html(res.responseText);
+							$("#loading").hide();
+						}
+					});
+				});
+			});
+			</script>
+			
+	</head>
+	<body>
+
+		<div class="container">
+			<!-- Header Title and Menu -->
+			<div class="row">
+				<div class="span4">
+			<a href="home.html"><img src="bg/bakery1.png" alt="logo"/></a>
+				</div>
+				<div class="span8">
+				
+				<ul class="nav nav-tabs">
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="howto.html">HOW TO ORDER</a></li>
+					<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					PRODUCT <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						  <li><a href="#">Cup Cakes</a></li>
+						  <li><a href="#">Cakes</a></li>
+						  <li><a href="#">Pies</a></li>
+						  <li><a href="#">Ice Box</a></li>
+						  <li><a href="#">Brownies & Bars</a></li>
+					</ul>
+					</li>
+					<li><a href="gallery.html">GALLERY</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					
+
+				</ul>
+				</div>
+			</div> 
+			
+			<div class="row">
+			
+			<div class="span8">
+			<h2 class="judul-about">Ajefy Bakery</h2>	
+			<p>The menu is an irresistible blend of comfort-oriented classics and elegant baked goods, but the specialty of the house is the Ajefy Signature size cupcakes!</p>
+
+<p>With our more than 20 varieties baked fresh daily and a new cupcake of the week every Sunday, each  Ajefy Bakery is an oasis of wall to wall deliciousness.</p>
+
+<p>And now you can enjoy your favorite Ajefy treats in the comfort of your own home.</p>
+
+<p>Delivered straight to your front door, perfect for a cupcake party, or without needing any occasion at all.</p>
+			</div>
+			
+			</div>
+			<div class="row">
+			<div class="span">
+			<center class="categorytittle">Weather Now <i class="icon-refresh" id="we"></i></center>
+						<br/>
+						<p id="weather" class=" set-content-justify">
+						<div id="loading">Loading.. Please Wait..cuk</div>
+						</p>
+						</div>
+			</div>
+			</div>
+			<!-- Footer Container -->
+		<div class="footer-container">
+			<div class="row row-main">
+				<div class="span4">
+				<label class="control-label"></label>
+				<p class="newsletter">Newsletter</p>
+				<div class="controls">
+				<input type="text" id="inputemail" placeholder="Email address">
+				<button type="submit" class="sign btn" value="sign">Sign up</button>
+				</div>
+				
+				</div>
+				<div class="span4">
+				<p class="footer-social"><b>Social</b></p>
+						<ul class="medsos">
+						
+						<li><a href="#"><img src="bg/facebook.png" alt=""/></a></li>
+						<li><a href="#"><img src="bg/twitter.png" alt=""/></a></li>
+						<li><a href="#"><img src="bg/instagram.png"  alt=""/></a></li>
+						</ul>
+						</div>
+				<div class="set-pay span4">
+				
+				<img src="bg/cc-mastercard.gif" alt=""/>
+				<img src="bg/cc-visa.gif"  alt=""/>
+				<p class="credit"> © 2014 Ajefy Bakery</p>
+				</div>
+			</div>
+		</div>	
+		 
+	<script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+	</body>
+</html>	
